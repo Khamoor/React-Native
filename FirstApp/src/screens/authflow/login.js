@@ -26,12 +26,14 @@ export default function LoginScreen({ navigation }) {
                 onChangeText={setPassword}
                 secureTextEntry
             />
-            <Button title="Login" onPress={handleLogin} />
-            <Button
-                title="Sign Up"
-                onPress={() => navigation.navigate('Signup')}
-                color="#841584"
-            />
+            <View style={styles.button}>
+                <Button title="Login" onPress={handleLogin} />
+                <Button
+                    title="Sign Up"
+                    onPress={() => navigation.navigate('Signup')}
+                    color="#841584"
+                />
+            </View>
         </View>
     );
 }
@@ -44,7 +46,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     title: {
-        fontSize: 20,
+        fontSize: 40,
         fontWeight: 'bold',
         marginBottom: 20,
     },
@@ -56,4 +58,8 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         paddingHorizontal: 10,
     },
+    button: {
+        width: 100,
+        height: 100,
+    }
 });
